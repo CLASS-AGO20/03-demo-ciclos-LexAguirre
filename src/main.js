@@ -24,13 +24,13 @@ export default class App {
 
         if(inicio > fin) {
             let t = inicio;
-            inicio = fin
-            fin = t
+            inicio = fin;
+            fin = t;
         }
 
         for(let i = inicio; i <= fin; i = i + 1) {
             if(i % 2 == 0) {
-                impares = impares + 1
+                impares = impares + 1;
             }
         }
 
@@ -45,12 +45,31 @@ export default class App {
 
         return impares;
     }
+
+    sumarParesWhile() {
+        let i = 1;
+        let suma = 0
+
+        while(i <= 20) {
+
+            if(i % 2 == 0) {
+                suma = suma + i;
+            }
+
+            i = i + 1;
+        }
+
+        return suma;
+    }
 }
 
 let app = new App();
 
-console.log("Implemented sumarParesFor")
+console.log("Implemented sumarParesFor");
 console.log(app.sumarParesFor());
 
-console.log("Implemented contarImparesfor")
+console.log("Implemented contarImparesfor");
 console.log(app.contarImparesFor(11, 5));
+
+console.log("Implemented sumarParesWhile")
+console.log(app.sumarParesWhile());
